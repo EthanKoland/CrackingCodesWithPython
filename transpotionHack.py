@@ -1,26 +1,28 @@
 import math
 
 def main():
-    s = "Cenoonommctmme oo snnio s S C"
-    
-    for key in range(2, len(s)):
-        temp = {}
-        for i in range(len(s)):
-            temp[i] = s[i]
-   
-        arr = createArray(key, s)
-    
-        for col in range(len(arr)):
-            for row in range(len(arr[col])):
-                arr[col][row] = (temp[arr[col][row]])
-                #print(col + row * int(len(s)/key), temp[col + row * int(len(s)/key)])
-                pass
-        final = ""
-        for col in range(len(arr)):
-            for row in range(len(arr[col])):
-                final += arr[col][row]
-        print(final)
+    s = "Cntooc nmesm ooi nsC  oSnmeom"
+    key = 9
+    print(decipher(key, s))
 
+def decipher(key, s):
+    temp = {}
+    for i in range(len(s)):
+        temp[i] = s[i]
+   
+    arr = createArray(key, s)
+    
+    for col in range(len(arr)):
+        for row in range(len(arr[col])):
+            arr[col][row] = (temp[arr[col][row]])
+                #print(col + row * int(len(s)/key), temp[col + row * int(len(s)/key)])
+            pass
+    final = ""
+    print(arr)
+    for col in range(len(arr)):
+        for row in range(len(arr[col])):
+            final += arr[col][row]
+    return(final)
 
         
 
