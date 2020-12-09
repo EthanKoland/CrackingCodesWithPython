@@ -3,7 +3,7 @@
 
 >this is the automatedtask one. It goes through and test the transportation ciphers texts
 
-#TODO\n
-*Finish chapter 10 \n
-*Finish rest of the Chapters
+#TODO
+>1.Finish chapter 10
+>2.Finish rest of the Chapters
 
