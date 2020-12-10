@@ -10,6 +10,9 @@ def isEnglish(s):
 
         s = s.split()
         
+        if(len(s) == 0):
+            return False
+        
         c = [0]
         print(s)
 
@@ -24,8 +27,6 @@ def isEnglish(s):
                 count += 1
             else:
                 print(word)
-        print(count, c[0])
-
         return (count/float(len(s)) > .20 and c[0]/float(len(s)) > .85)
 
 def lettersOnly(s, c):
@@ -38,5 +39,5 @@ def lettersOnly(s, c):
     return(arr)
 
 if (__name__ == "__main__"):
-    isEnglish("Common sence is not so common")
+    isEnglish("Is this sentence English?")
     
