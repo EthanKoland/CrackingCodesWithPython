@@ -14,7 +14,7 @@ def isEnglish(s):
             return False
         
         c = [0]
-        print(s)
+        
 
         for i in range(len(s)):
             s[i] = lettersOnly(s[i], c)
@@ -27,7 +27,7 @@ def isEnglish(s):
                 count += 1
             else:
                 print(word)
-        return (count/float(len(s)) > .20 and c[0]/float(len(s)) > .85)
+        return (count/float(len(s)) > .25 and c[0]/float(len(s)) > .85)
 
 def lettersOnly(s, c):
     l = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "

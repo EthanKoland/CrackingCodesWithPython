@@ -15,6 +15,8 @@ def main():
 
     #Start Gui
     labels = []
+    MinusButtons = []
+    PlusButtons = []
 
 
     def plus(data):
@@ -31,6 +33,7 @@ def main():
         
     
     def minus(data):
+        print(data)
         name = data[0]
         number = data[1]
         cipher = data[2]
@@ -63,15 +66,23 @@ def main():
     Minusallbtn.grid(row=1, column=26, sticky="nsew")
 
     for i in range(25):
-        locals()['f%dbtnMinus' , (i)] = tk.Button(master=window, text="-" ,command=lambda: minus(labels[i]), height=1)
-        locals()['f%dbtnMinus' , (i)].grid(row=0, column=i, sticky="nsew")
+        st = 'f%sbtnMinus' % (i)
+        print(st)
+        globals()[st] = tk.Button(master=window, text="-" ,command=lambda: minus(labels[i]), height=1)
+        globals()[st].grid(row=0, column=i, sticky="nsew")
+        
 
-        locals()['f%dlbl' , (i)] = tk.Label(master= window, text= t[i][0], height=1, background= "red")
-        locals()['f%dlbl' , (i)].grid(row=1, column=i, sticky="nsew")
-        labels.append(([locals()['f%dlbl' , (i)], i, t[i]]))
+        globals()['f%dlbl' % (i)] = tk.Label(master= window, text= t[i][0], height=1, background= "red")
+        globals()['f%dlbl' % (i)].grid(row=1, column=i, sticky="nsew")
+        labels.append((globals()['f%dlbl' % (i)], i, t[i]))
 
-        locals()['f%dplus' , (i)] = tk.Button(master=window, text="+" , command=lambda: plus(labels[i]), height=1)
-        locals()['f%dplus' , (i)].grid(row=2, column=i, sticky="nsew")
+        globals()['f%dplus' % (i)] = tk.Button(master=window, text="+" , command= print(i), height=1)
+        globals()['f%dplus' % (i)].grid(row=2, column=i, sticky="nsew")
+        
+        
+
+    print(PlusButtons)
+
 
     
 

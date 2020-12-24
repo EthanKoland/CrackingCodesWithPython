@@ -13,7 +13,7 @@ def main():
 
 def encText(t,k):
     o = ''
-    ind = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 .?!"
+    ind = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !?."
     for c in t:
         i = ind.find(c)
         i += k 
@@ -22,7 +22,7 @@ def encText(t,k):
     return o
 
 def decText(m,k):
-    ind = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 .?!"
+    ind = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !?."
     o = ""
     for c in m:
         i = ind.find(c)
